@@ -48,8 +48,8 @@ moves, main_dict = main()
 for line in moves:
 	qty, orig, dest = line
 	to_move = [main_dict[orig].pop(0) for _ in range(qty)]
-
 	to_move.reverse()
+	
 	for char in to_move:
 		main_dict[dest].insert(0, char)
 
