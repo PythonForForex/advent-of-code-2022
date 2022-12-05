@@ -27,10 +27,10 @@ def main():
 	
 	return moves, main_dict
 
-moves, main_dict = main()
-
 
 # Part 1 
+
+moves, main_dict = main()
 
 for line in moves:
 	qty, orig, dest = line
