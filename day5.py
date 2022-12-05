@@ -34,11 +34,12 @@ moves, main_dict = main()
 
 for line in moves:
 	qty, orig, dest = line
+
 	for _ in range(qty):
 		to_move = main_dict[orig].pop(0)
 		main_dict[dest].insert(0, to_move)
 
-print(''.join([v[0] for k,v in main_dict.items()]))
+print(''.join([v[0] for v in main_dict.values()]))
 
 
 # Part 2
@@ -49,9 +50,9 @@ for line in moves:
 	qty, orig, dest = line
 	to_move = [main_dict[orig].pop(0) for _ in range(qty)]
 	to_move.reverse()
-	
+
 	for char in to_move:
 		main_dict[dest].insert(0, char)
 
-print(''.join([v[0] for k,v in main_dict.items()]))
+print(''.join([v[0] for v in main_dict.values()]))
 
