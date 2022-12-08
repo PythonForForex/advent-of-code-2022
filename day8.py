@@ -59,12 +59,9 @@ for x in range(max_range):
 		num = raw_input[x,y]
 		all_x = [range(y-1, -1, -1), range(y+1, max_range)]
 		all_y = [range(x-1, -1, -1), range(x+1, max_range)]
-
 		xx = main(all_x, num, x, None)
 		yy = main(all_y, num, None, y)
-
-		if xx * yy > best:
-			best = xx * yy
+		best = max(best, xx*yy)
 
 
 print(f'Part 2 - {best}')	
